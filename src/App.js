@@ -39,7 +39,7 @@ function App() {
   <input ref={todoNameRef} type="text" />
   <button onClick={handleAddTodo}>Add Todo</button>
   <button>Clear Completed Todos</button>
-  <div>0 Left to do</div>
+  <div>{todos.filter(todo => !todo.complete).length} Left to do</div>
   </>
   )
 }
